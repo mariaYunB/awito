@@ -19,3 +19,9 @@ modalAdd.addEventListener('click', event => {
         modalSubmit.reset();
     }
 });
+
+document.addEventListener('keydown', e => {
+    if (!document.querySelector(".modal").classList.contains('hide') && e.keyCode === 27) {
+    document.querySelector(".modal").classList.add('hide')
+    }
+});
